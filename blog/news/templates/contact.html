@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+<div class = "container" style = "text-align:center;">
+    <center><h1>You can contact us here</h1></center>
+    <br>
+
+    <p>Hey, if you wish to contact SAMNEWS, please call out hotline +2348034095344 or send an email to WilfredSamuel000@gmail.com</p>
+    <p>You can also drop your information through the textbox below. We'll attend to it as soon as possible</p>
+    
+    <form method = "POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type = "submit" value = "Submit Message" class="btn btn-sm btn-primary">
+    </form>
+</div>
+</main>
+{% endblock %}
