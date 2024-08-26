@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <main class="container mt-3 mb-5">
-	<!-- featured news -->
+	<!-- Featured news -->
 	<div class="row my-3">
 		<!-- Left -->
 		<div class="col-md-7">
@@ -14,7 +14,7 @@
 			  </div>
 			</div>
 		</div>
-		<!-- Right -->
+		<!-- Right News Box -->
 		<div class="col-md-5" style="max-height: 500px; overflow: auto;">
 			{% for news in three_news %}
 			<!-- News Box -->
@@ -35,7 +35,7 @@
 			{% endfor %}
 		</div>
 	</div>
-	<!-- Category Wise News -->
+	<!-- News by Category -->
 	{% for category in categories %}
 	<h3 class="border-bottom pb-1">{{category.title}} <a href="/category/{{category.id}}" class="float-end btn btn-sm btn-dark">In this Category</a></h3>
 	<div class="row my-4">
@@ -57,7 +57,7 @@
 		{% endfor %}
 	</div>
 	{% endfor %}
-	<!-- End Single Category -->
+	<!-- End a single Category -->
 </main>
 {% endblock %}
 
